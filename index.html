@@ -1,0 +1,1373 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#e9efe5">
+
+<title>ของขวัญเล็ก ๆ สำหรับเธอ</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================
+   01. COLOR PALETTE
+========================================= */
+
+:root {
+  --bg: #e9efe5;
+  --bg-deep: #dce7d7;
+  --paper: #f8f8f0;
+  --paper-dark: #edf1e8;
+
+  --green: #82977c;
+  --green-dark: #596f57;
+  --green-deep: #405640;
+  --green-light: #b9ccb3;
+
+  --text: #435043;
+  --muted: #899587;
+  --line: #d5dfd0;
+  --white: #fffefa;
+
+  --shadow: 0 20px 60px rgba(70,90,70,0.08);
+}
+
+/* =========================================
+   02. RESET & BASE
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Angsana New", "TH Sarabun New", serif;
+  font-size: 26px;
+  color: var(--text);
+  background: var(--bg);
+  overflow-x: hidden;
+}
+
+button {
+  font-family: "Angsana New", "TH Sarabun New", serif;
+}
+
+.page {
+  display: none;
+  min-height: 100vh;
+  padding: 65px 25px;
+  position: relative;
+  animation: fadeIn 0.8s ease;
+}
+
+.page.active {
+  display: flex;
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1050px;
+  margin: auto;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+@keyframes envelopeBounce {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.12) rotate(-5deg);
+  }
+
+  100% {
+    transform: scale(0.9) rotate(5deg);
+  }
+}
+
+@keyframes rise {
+  from {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(-100vh);
+    opacity: 0.8;
+  }
+}
+
+/* =========================================
+   03. TYPOGRAPHY
+========================================= */
+
+.small-label {
+  font-size: 28px;
+  letter-spacing: 3px;
+  color: var(--green);
+  margin-bottom: 15px;
+}
+
+.heading-thai {
+  font-family: "Angsana New", "TH Sarabun New", serif;
+  font-size: clamp(65px, 9vw, 110px);
+  font-weight: normal;
+  line-height: 0.95;
+  color: var(--green-deep);
+}
+
+.subtitle {
+  font-size: 32px;
+  color: var(--muted);
+  margin-top: 15px;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.body-thai {
+  font-size: 30px;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.english {
+  font-family: "Cormorant Garamond", serif;
+}
+
+.english-heading {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: normal;
+  font-size: clamp(60px, 9vw, 115px);
+  line-height: 0.95;
+  color: var(--green-deep);
+}
+
+.divider {
+  width: 55px;
+  height: 1px;
+  background: var(--green-light);
+  margin: 30px auto;
+}
+
+/* =========================================
+   04. BUTTONS
+========================================= */
+
+.btn {
+  border: 1px solid var(--green-light);
+  background: transparent;
+  color: var(--green-dark);
+  padding: 9px 30px;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 29px;
+  letter-spacing: 1px;
+  margin-top: 25px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: var(--green-dark);
+  color: var(--white);
+  border-color: var(--green-dark);
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+/* =========================================
+   05. PAGE 1 : OPENING
+========================================= */
+
+#opening {
+  background: linear-gradient(135deg, var(--bg), var(--paper-dark));
+}
+
+.opening-content {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.opening-note {
+  font-size: 32px;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-top: 25px;
+}
+
+.envelope {
+  display: inline-block;
+  font-size: 100px;
+  margin: 30px 0;
+  cursor: pointer;
+  user-select: none;
+  animation: float 4s ease-in-out infinite;
+  transition: transform 0.4s;
+}
+
+.envelope:hover {
+  transform: scale(1.12);
+}
+
+.envelope.opening {
+  animation: envelopeBounce 0.65s ease forwards;
+}
+
+/* =========================================
+   06. PAGE 2 : PHOTOS
+========================================= */
+
+#photos {
+  background: var(--paper);
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin: 45px 0 25px;
+}
+
+.photo-card {
+  padding: 12px;
+  background: var(--white);
+  box-shadow: var(--shadow);
+  transition: transform 0.4s;
+}
+
+.photo-card:nth-child(1) {
+  transform: rotate(-1deg);
+}
+
+.photo-card:nth-child(2) {
+  transform: rotate(1.5deg);
+}
+
+.photo-card:nth-child(3) {
+  transform: rotate(-1.5deg);
+}
+
+.photo-card:hover {
+  transform: rotate(0deg) translateY(-6px);
+}
+
+.photo-card img {
+  display: block;
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  background: var(--bg-deep);
+}
+
+.photo-caption {
+  font-size: 30px;
+  color: var(--green-dark);
+  padding: 12px 5px 5px;
+}
+
+.photo-note {
+  font-size: 30px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* =========================================
+   07. PAGE 3 : SONG
+========================================= */
+
+#song {
+  background: linear-gradient(180deg, var(--bg), var(--paper));
+}
+
+.song-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 55px;
+  align-items: center;
+  max-width: 850px;
+  margin: 40px auto;
+}
+
+.song-cover {
+  padding: 15px;
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+
+.song-cover img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background: var(--bg-deep);
+}
+
+.song-text {
+  text-align: left;
+}
+
+.song-title {
+  font-size: 52px;
+  font-weight: normal;
+  color: var(--green-dark);
+  margin-bottom: 15px;
+}
+
+.song-description {
+  font-size: 30px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.music-controls {
+  margin-top: 25px;
+}
+
+.music-controls button {
+  border: 1px solid var(--green-light);
+  background: var(--green-dark);
+  color: white;
+  padding: 8px 25px;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: 0.3s;
+  font-size: 29px;
+}
+
+.music-controls button:hover {
+  background: var(--green-deep);
+}
+
+.music-status {
+  font-size: 26px;
+  color: var(--muted);
+  margin-top: 15px;
+}
+
+/* =========================================
+   08. PAGE 4 : BIRTHDAY LETTER
+========================================= */
+
+#letter {
+  background: var(--paper);
+}
+
+.letter-paper {
+  max-width: 760px;
+  margin: auto;
+  padding: clamp(30px, 6vw, 75px);
+  background: #fffefa;
+  border: 1px solid #e5e9df;
+  box-shadow: var(--shadow);
+  position: relative;
+  text-align: left;
+}
+
+.letter-paper::before {
+  content: "✦";
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  font-size: 30px;
+  color: var(--green-light);
+}
+
+.letter-paper h2 {
+  font-size: 55px;
+  font-weight: normal;
+  color: var(--green-dark);
+  margin-bottom: 25px;
+}
+
+.letter-paper p {
+  font-size: 30px;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+.signature {
+  font-size: 38px;
+  font-style: italic;
+  color: var(--green);
+  margin-top: 30px;
+}
+
+/* =========================================
+   09. PAGE 5 : AFTER SONG
+========================================= */
+
+#afterfilm {
+  background: linear-gradient(180deg, var(--paper), var(--bg));
+}
+
+.afterfilm-text {
+  max-width: 680px;
+  margin: auto;
+  text-align: center;
+  font-size: 31px;
+  line-height: 1.8;
+}
+
+.afterfilm-text p {
+  margin-bottom: 22px;
+}
+
+/* =========================================
+   10. PAGE 6 : CLOSING
+========================================= */
+
+#closing {
+  background: linear-gradient(180deg, #dce8d7, #edf1e8);
+  overflow: hidden;
+  position: relative;
+}
+
+.closing-content {
+  max-width: 800px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.closing-date {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 17px;
+  letter-spacing: 6px;
+  color: var(--green);
+  margin-bottom: 25px;
+}
+
+.closing-title {
+  font-size: clamp(70px, 10vw, 120px);
+  font-weight: normal;
+  line-height: 0.95;
+  color: var(--green-deep);
+}
+
+.heart {
+  font-size: 42px;
+  color: var(--green);
+  margin: 20px 0;
+  animation: heartbeat 2s infinite;
+}
+
+/* รูปของคนพิเศษ */
+
+.closing-photo-frame {
+  width: min(340px, 80vw);
+  margin: 30px auto;
+  padding: 12px;
+  background: var(--white);
+  box-shadow: 0 20px 60px rgba(70,90,70,0.12);
+  transform: rotate(-1deg);
+  transition: transform 0.4s;
+}
+
+.closing-photo-frame:hover {
+  transform: rotate(0deg);
+}
+
+.closing-photo {
+  display: block;
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  background: var(--bg-deep);
+}
+
+.closing-photo-caption {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 24px;
+  color: var(--green-dark);
+  padding: 15px 5px 8px;
+}
+
+/* คำอวยพร */
+
+.closing-wishes {
+  font-size: 34px;
+  line-height: 1.8;
+  font-weight: normal;
+  color: var(--text);
+  margin: 25px auto;
+}
+
+.closing-footer {
+  font-style: italic;
+  color: var(--green);
+  font-size: 38px;
+  margin-top: 25px;
+}
+
+.made-with-love {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: var(--muted);
+  margin-top: 40px;
+}
+
+/* =========================================
+   11. FLOATING HEARTS
+========================================= */
+
+.floating-hearts {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floating-hearts span {
+  position: absolute;
+  bottom: -30px;
+  color: var(--green-light);
+  opacity: 0;
+  animation: rise 9s linear forwards;
+}
+
+/* =========================================
+   12. FLOATING MUSIC BUTTON
+========================================= */
+
+.music-mini {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 50;
+  display: none;
+}
+
+.music-mini button {
+  border: 1px solid var(--green-light);
+  background: rgba(248,248,240,0.95);
+  color: var(--green-dark);
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  font-size: 26px;
+}
+
+/* =========================================
+   13. RESPONSIVE MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  body {
+    font-size: 24px;
+  }
+
+  .page {
+    padding: 45px 20px;
+  }
+
+  .heading-thai {
+    font-size: 65px;
+  }
+
+  .subtitle {
+    font-size: 29px;
+  }
+
+  .opening-note {
+    font-size: 29px;
+  }
+
+  .photo-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 35px auto;
+  }
+
+  .photo-card img {
+    height: 420px;
+  }
+
+  .song-layout {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    gap: 30px;
+  }
+
+  .song-text {
+    text-align: center;
+  }
+
+  .song-title {
+    font-size: 50px;
+  }
+
+  .song-description {
+    font-size: 29px;
+  }
+
+  .letter-paper {
+    padding: 35px 25px;
+  }
+
+  .letter-paper h2 {
+    font-size: 50px;
+  }
+
+  .letter-paper p {
+    font-size: 28px;
+  }
+
+  .afterfilm-text {
+    font-size: 28px;
+  }
+
+  .closing-title {
+    font-size: 70px;
+  }
+
+  .closing-photo {
+    height: 390px;
+  }
+
+  .closing-wishes {
+    font-size: 30px;
+  }
+
+  .closing-footer {
+    font-size: 33px;
+  }
+}
+
+/* =========================================
+   14. REDUCE MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================================
+     PAGE 1 : OPENING
+========================================= -->
+
+<section class="page active center" id="opening">
+
+  <div class="opening-content">
+
+    <div class="small-label">
+      25 พฤศจิกายน 2026
+    </div>
+
+    <h1 class="heading-thai">
+      ของขวัญเล็ก ๆ<br>
+      สำหรับเธอ
+    </h1>
+
+    <div class="divider"></div>
+
+    <div
+      class="envelope"
+      id="envelope"
+      role="button"
+      tabindex="0"
+      onclick="openEnvelope()"
+      onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openEnvelope();}"
+    >
+      💌
+    </div>
+
+    <p class="opening-note">
+      เค้ามีบางอย่างอยากมอบให้เธอ<br>
+      ลองเปิดดูนะ
+    </p>
+
+    <button
+      class="btn"
+      type="button"
+      id="openButton"
+      onclick="openEnvelope()"
+    >
+      เปิดจดหมาย
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     PAGE 2 : PHOTO ALBUM
+========================================= -->
+
+<section class="page center" id="photos">
+
+  <div class="container">
+
+    <div class="small-label">
+      DEDICATED TO SOMEONE
+    </div>
+
+    <h2 class="heading-thai">
+      A Picture Of You
+    </h2>
+
+    <p class="subtitle">
+      Just a little space for someone I'm glad to know.
+    </p>
+
+    <div class="divider"></div>
+
+    <div class="photo-grid">
+
+      <div class="photo-card">
+        <img src="assets/photos/her-1.jpg" alt="PICTURE">
+        <div class="photo-caption">Your Smile</div>
+      </div>
+
+      <div class="photo-card">
+        <img src="assets/photos/her-2.jpg" alt="PICTURE">
+        <div class="photo-caption">Your Little Moments</div>
+      </div>
+
+      <div class="photo-card">
+        <img src="assets/photos/her-3.jpg" alt="PICTURE">
+        <div class="photo-caption">Simply You</div>
+      </div>
+
+    </div>
+
+    <p class="photo-note">
+      มีความสุขมากๆนะ<br>
+      แล้วก็ยิ้มเยอะๆเหมือนในภาพที่ถ่ายด้วยนะ
+    </p>
+
+    <button class="btn" type="button" onclick="goTo('song')">
+      หน้าถัดไป →
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     PAGE 3 : A SONG FOR YOU
+========================================= -->
+
+<section class="page center" id="song">
+
+  <div class="container">
+
+    <div class="small-label">
+      เพลงหนึ่งเพลงที่เค้าอยากมอบให้
+    </div>
+
+    <h2 class="heading-thai">
+      MUSIC
+    </h2>
+
+    <p class="subtitle">
+      ลองฟังเพลงนี้หน่อยนะ
+    </p>
+
+    <div class="divider"></div>
+
+    <div class="song-layout">
+
+      <div class="song-cover">
+        <img src="assets/photos/her-4.jpg" alt="A SONG FOR YOU">
+      </div>
+
+      <div class="song-text">
+
+        <h3 class="song-title">
+          เพลงที่อยากให้เธอได้ฟัง
+        </h3>
+
+        <p class="song-description">
+          หากมีสิ่งเล็ก ๆ สักอย่างที่เค้าอยากมอบให้เธอในวันนี้
+          ก็คงเป็นบทเพลงที่อยากให้เธอได้ฟัง
+          ในวันที่เธอเหนื่อย ในวันที่เธอมีความสุข
+          หรือในวันธรรมดาที่ไม่มีอะไรพิเศษ
+        </p>
+
+        <div class="music-controls">
+          <audio id="backgroundMusic" 
+          src="./assets/music/เพื่อนเธอ - POTATO.mp3"
+          controls
+          loop
+          ></audio>
+
+          <button
+            type="button"
+            onclick="toggleMusic()"
+            id="playButton"
+          >
+            ♫ เล่นเพลง
+          </button>
+
+          <p class="music-status" id="musicStatus">
+            บทเพลงเล็ก ๆ ที่ตั้งใจมอบให้เธอ
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <button class="btn" type="button" onclick="goTo('letter')">
+      อ่านจดหมาย →
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     PAGE 4 : BIRTHDAY LETTER
+========================================= -->
+
+<section class="page center" id="letter">
+
+  <div class="container">
+
+    <div class="small-label">
+      ข้อความจากใจ
+    </div>
+
+    <div class="letter-paper">
+
+      <h2>ถึงคุณธัญญาภรณ์</h2>
+
+      <p>
+        สุขสันต์วันเกิดนะ 25/11/2026
+      </p>
+
+      <p>
+        วันนี้เป็นวันพิเศษของเธอ และเค้าก็อยากให้วันนี้เป็นวันที่เต็มไปด้วยรอยยิ้มของเธอ
+        ความสบายใจ และเรื่องราวดี ๆ ที่เธอสมควรได้รับนะ
+      </p>
+
+      <p>
+        เค้าเป็นคนพูดไม่ค่อยเก่งเท่าไหร่ แถมบางครั้งก็ยังพูดไม่ค่อยรู้เรื่องอีกด้วย ฮ่า ๆ
+        แล้วก็ไม่รู้เหมือนกันว่าควรอวยพรวันเกิดเธอยังไงให้ดี
+        เค้าเลยตัดสินใจเขียนโค้ดและสร้างเว็บไซต์เล็ก ๆ นี้ขึ้นมาแทน
+        อาจจะมีตัวหนังสือเยอะไปสักหน่อย ก็ทนๆอ่านหน่อยนะ
+      </p>
+
+      <p>
+        เนื่องในวันคล้ายวันเกิดของเธอ วันที่ 25 พฤศจิกายน 2026 นี้
+        เค้าขอให้เธอมีความสุขมาก ๆ และขอให้หนึ่งเดือนจากนี้และในปีที่กำลังจะเริ่มต้นขึ้น
+        เป็นปีที่อ่อนโยนแล้วก็งดงามสำหรับเธอนะ
+      </p>
+
+      <p>
+        ขอให้ทุก ๆ เช้าที่เธอตื่นขึ้นมา มีเรื่องเล็ก ๆ ให้ยิ้มได้เสมอ
+        ขอให้ในวันที่เหนื่อยล้า เธอยังมีแรงใจที่จะพักผ่อนและเริ่มต้นใหม่ได้อีกครั้ง
+        เหมือนพระอาทิตย์ที่ยังคงขึ้นในทุก ๆ เช้า และคอยมอบแสงสว่างให้กับวันใหม่
+        ขอให้เธอมีวันที่สดใส มีหัวใจที่เบาสบาย
+        และพบกับความสุขได้ในสิ่งธรรมดารอบตัว
+      </p>
+
+      <p>
+        สิ่งไหนที่เธอตั้งใจไว้ ขอให้ค่อย ๆ สำเร็จดังที่เธอปรารถนา
+        ขอให้เส้นทางที่เธอเดินเต็มไปด้วยโอกาสที่ดี
+        และขอให้เธอได้พบเจอกับผู้คนที่น่ารัก เรื่องราวที่งดงาม
+        ตลอดจนสิ่งที่ทำให้เธอรู้สึกว่าโลกใบนี้ยังมีอะไรดี ๆ รออยู่เสมอ
+      </p>
+
+      <p>
+        เค้าอาจจะไม่ถนัดเรื่องการอวยพรสักเท่าไหร่ และอาจจะไม่ใช่คนที่เรียบเรียงคำพูดได้เก่งนัก
+        แต่เค้าก็ตั้งใจสร้างเว็บไซต์จดหมายนี้ขึ้นมา
+        เพื่อบอกกับเธอว่า การได้รู้จักเธอนั้นเป็นเรื่องราวที่เค้ารู้สึกยินดีมาก ๆ เลยนะ
+        และเค้าก็จะเก็บความรู้สึกดี ๆ ที่เกิดขึ้นจากการได้รู้จักเธอเอาไว้
+        อย่างทะนุถนอมและให้มันเป็นความทรงจำที่งดงามเสมอ
+      </p>
+
+      <p>
+        ขอให้วันเกิดปีนี้ของเธอเต็มไปด้วยความอบอุ่น
+        ขอให้เธอได้รับความรัก ความใส่ใจ และความปรารถนาดีจากผู้คนรอบตัว
+        ไม่ใช่เพียงแค่ในวันนี้ แต่ในทุก ๆ วันต่อจากนี้
+      </p>
+
+      <p>
+        ขอให้เธอได้ใช้ชีวิตในแบบที่ตัวเองชอบ ได้หัวเราะอย่างเต็มที่
+        ได้พักในวันที่เหนื่อย และได้มีความสุขกับชีวิตในแบบที่เธอสมควรได้รับ
+        ขอให้เธอไม่ต้องกินยาเยอะอีกแล้ว ขอให้สุขภาพแข็งแรง ขอให้ไม่ต้องมีเรื่องมาทำให้คิดมากอีกแล้วนะ
+      </p>
+
+      <p>
+        สุขสันต์วันเกิดนะ<br>
+        ขอให้โลกใบนี้ใจดีกับเธอเสมอ 
+        แล้วก็..ยิ้มเยอะๆนะ🤍
+      </p>
+
+      <div class="signature">
+        ด้วยความปรารถนาดีเสมอ
+      </div>
+
+    </div>
+
+    <button class="btn" type="button" onclick="goTo('afterfilm')">
+      เรื่องราวถัดไป →
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     PAGE 5 : AFTER THE SONG
+========================================= -->
+
+<section class="page center" id="afterfilm">
+
+  <div class="container">
+
+    <div class="small-label">
+      เรื่องเล็ก ๆ ที่มีความหมาย
+    </div>
+
+    <h2 class="heading-thai">
+      บางช่วงเวลา
+    </h2>
+
+    <div class="divider"></div>
+
+    <div class="afterfilm-text">
+
+      <p>
+        บางความทรงจำไม่ได้จำเป็นต้องยิ่งใหญ่
+        ไม่ต้องเป็นวันที่พิเศษ
+        ไม่ต้องเป็นสถานที่สวยงาม
+        และไม่ต้องมีเหตุผลอะไรเลย
+      </p>
+
+      <p>
+        เพียงเป็นช่วงเวลาธรรมดาที่เราได้รู้จักใครสักคน
+        ได้เห็นรอยยิ้ม ได้พูดคุย
+        หรือได้เห็นเขาในแบบที่เขาเป็น
+        สิ่งเล็ก ๆ เหล่านั้นก็อาจกลายเป็นความทรงจำ
+        ที่เรานึกถึงพร้อมรอยยิ้มได้ในวันหนึ่ง
+      </p>
+
+      <p>
+        บางครั้งเราอาจไม่รู้หรอกว่า
+        ช่วงเวลาธรรมดาที่เกิดขึ้นในวันนี้
+        จะมีความหมายมากเพียงใดเมื่อเวลาผ่านไป
+        แต่หากมันทำให้หัวใจรู้สึกดี
+        ก็คงเป็นสิ่งที่ควรค่าแก่การเก็บรักษาเอาไว้
+      </p>
+
+      <p>
+        และสำหรับเค้า
+        การได้รู้จักเธอก็เป็นหนึ่งในช่วงเวลาเล็ก ๆ
+        ที่อยากเก็บไว้ในความทรงจำอย่างดี
+      </p>
+
+      <p style="color:var(--green);font-style:italic;">
+        เพราะบางสิ่งที่งดงามที่สุดในชีวิต<br>
+        อาจเป็นเพียงการได้พบใครสักคนหนึ่งในช่วงเวลาหนึ่ง
+      </p>
+
+    </div>
+
+    <button class="btn" type="button" onclick="goTo('closing')">
+      คำอวยพรสุดท้าย →
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     PAGE 6 : CLOSING
+========================================= -->
+
+<section class="page center" id="closing">
+
+  <div class="floating-hearts" id="hearts"></div>
+
+  <div class="closing-content">
+
+    <div class="closing-date">
+      25 NOVEMBER 2026
+    </div>
+
+    <h1 class="closing-title">
+      สุขสันต์วันเกิดนะ
+    </h1>
+
+    <p class="subtitle">
+      คุณธัญญาภรณ์ ภัทรภรณ์สกุล
+    </p>
+
+    <div class="heart">♡</div>
+
+    <!-- รูปของเธอ 1 ภาพ -->
+
+    <div class="closing-photo-frame">
+
+      <img
+        class="closing-photo"
+        src="assets/photos/her-5.jpg"
+        alt="TANYAPORN"
+      >
+
+      <div class="closing-photo-caption">
+        Fai Tanyaporn
+      </div>
+
+    </div>
+
+    <!-- คำอวยพร -->
+
+    <div class="closing-wishes">
+
+      ขอให้ปีนี้เป็นปีที่ใจดีกับเธอมาก ๆ<br>
+      ขอให้มีความสุขกับเรื่องเล็ก ๆ ในทุกวัน<br>
+      ขอให้ได้พบเจอแต่สิ่งดีงาม<br>
+      ขอให้ความเหนื่อยล้าถูกแทนที่ด้วยรอยยิ้ม<br>
+      และขอให้เธอยังคงเป็นเธอ ในแบบที่สวยงามเสมอ
+
+    </div>
+
+    <div class="divider"></div>
+
+    <p class="body-thai">
+      ดูแลตัวเองดี ๆ นะ<br>
+      และอย่าลืมยิ้มเยอะ ๆ
+    </p>
+
+    <div class="closing-footer">
+      ด้วยความรักและความปรารถนาดีเสมอ
+    </div>
+
+    <div class="made-with-love">
+      MADE WITH LOVE · 2026
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     FLOATING MUSIC BUTTON
+========================================= -->
+
+<div class="music-mini" id="musicMini">
+
+  <button
+    type="button"
+    onclick="toggleMusic()"
+    id="miniMusicButton"
+  >
+    ♫ เพลง
+  </button>
+
+</div>
+
+
+<!-- =========================================
+     MUSIC FILE
+========================================= -->
+
+<audio id="birthdayMusic" loop preload="metadata">
+
+  <source
+    src="assets/music/birthday-song.mp3"
+    type="audio/mpeg"
+  >
+
+</audio>
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
+<script>
+
+/* -----------------------------------------
+   01. MAIN VARIABLES
+----------------------------------------- */
+
+let musicPlaying = false;
+let envelopeOpened = false;
+
+const music = document.getElementById('birthdayMusic');
+
+
+/* -----------------------------------------
+   02. PAGE NAVIGATION
+----------------------------------------- */
+
+function goTo(pageId) {
+
+  const pages = document.querySelectorAll('.page');
+
+  pages.forEach(page => {
+    page.classList.remove('active');
+  });
+
+  const nextPage = document.getElementById(pageId);
+
+  if (!nextPage) {
+    console.error('ไม่พบหน้า:', pageId);
+    return;
+  }
+
+  nextPage.classList.add('active');
+
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+
+  const musicMini = document.getElementById('musicMini');
+
+  if (pageId === 'opening') {
+    musicMini.style.display = 'none';
+  } else {
+    musicMini.style.display = 'block';
+  }
+
+  if (pageId === 'closing') {
+    createHearts();
+  }
+
+}
+
+
+/* -----------------------------------------
+   03. OPEN ENVELOPE
+----------------------------------------- */
+
+function openEnvelope() {
+
+  if (envelopeOpened) return;
+
+  envelopeOpened = true;
+
+  const envelope = document.getElementById('envelope');
+  const openButton = document.getElementById('openButton');
+
+  openButton.disabled = true;
+
+  envelope.classList.remove('opening');
+
+  void envelope.offsetWidth;
+
+  envelope.classList.add('opening');
+
+  setTimeout(() => {
+    goTo('photos');
+  }, 650);
+
+}
+
+
+/* -----------------------------------------
+   04. PLAY / PAUSE MUSIC
+----------------------------------------- */
+
+function toggleMusic() {
+
+  if (!musicPlaying) {
+
+    music.play()
+      .then(() => {
+        musicPlaying = true;
+        updateMusicButtons();
+      })
+      .catch(error => {
+
+        console.error('ไม่สามารถเล่นเพลงได้:', error);
+
+        const status = document.getElementById('musicStatus');
+
+        if (status) {
+          status.textContent =
+            'ตรวจสอบไฟล์เพลงในโฟลเดอร์ assets/music';
+        }
+
+      });
+
+  } else {
+
+    music.pause();
+
+    musicPlaying = false;
+
+    updateMusicButtons();
+
+  }
+
+}
+
+
+/* -----------------------------------------
+   05. UPDATE MUSIC BUTTONS
+----------------------------------------- */
+
+function updateMusicButtons() {
+
+  const mainButton = document.getElementById('playButton');
+  const miniButton = document.getElementById('miniMusicButton');
+  const status = document.getElementById('musicStatus');
+
+  if (musicPlaying) {
+
+    mainButton.textContent = '❚❚ หยุดเพลง';
+    miniButton.textContent = '❚❚ หยุดเพลง';
+
+    if (status) {
+      status.textContent = 'กำลังเล่นเพลงให้เธอฟัง ♡';
+    }
+
+  } else {
+
+    mainButton.textContent = '♫ เล่นเพลง';
+    miniButton.textContent = '♫ เพลง';
+
+    if (status) {
+      status.textContent =
+        'บทเพลงเล็ก ๆ ที่ตั้งใจมอบให้เธอ';
+    }
+
+  }
+
+}
+
+
+/* -----------------------------------------
+   06. MUSIC EVENT LISTENERS
+----------------------------------------- */
+
+music.addEventListener('play', () => {
+
+  musicPlaying = true;
+  updateMusicButtons();
+
+});
+
+music.addEventListener('pause', () => {
+
+  musicPlaying = false;
+  updateMusicButtons();
+
+});
+
+
+/* -----------------------------------------
+   07. FLOATING HEARTS
+----------------------------------------- */
+
+function createHearts() {
+
+  const container = document.getElementById('hearts');
+
+  if (container.children.length > 0) return;
+
+  for (let i = 0; i < 18; i++) {
+
+    const heart = document.createElement('span');
+
+    heart.textContent = Math.random() > 0.5 ? '♡' : '♥';
+
+    heart.style.left = Math.random() * 100 + '%';
+
+    heart.style.animationDuration =
+      (5 + Math.random() * 6) + 's';
+
+    heart.style.animationDelay =
+      (Math.random() * 5) + 's';
+
+    heart.style.fontSize =
+      (12 + Math.random() * 20) + 'px';
+
+    container.appendChild(heart);
+
+  }
+
+}
+
+</script>
+
+</body>
+</html>
